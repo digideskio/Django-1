@@ -1,0 +1,12 @@
+<html>
+<head>
+	<title>Page Edit</title>
+</head>
+<body>
+	<h1>Page {{ title }}</h1>
+	<form method="POST" action="" enctype="multipart/form-data" />{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="save">
+	</form>
+</body>
+</html>

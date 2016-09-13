@@ -1,0 +1,13 @@
+<html>
+<head>
+	<title>Page Register</title>
+</head>
+<body>
+	<h1>{{ title }}</h1>
+	<form method="POST" enctype="multupart/form-data">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Save">
+	</form>
+</body>
+</html>

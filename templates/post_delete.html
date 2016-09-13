@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title>Page delete</title>
+</head>
+<body>
+	<h1>Confirm Delete</h1>
+	<form method="POST" action="/list/" enctype = "mulitpart/form-data/">{% csrf_token %}
+	<p>
+		<h5>Are you sure will delete this post ? </h5>
+		<input type="submit" value="delete" />
+		<a href="/list/">Cancel</a>
+	</p>
+	</form>
+
+</body>
+</html>

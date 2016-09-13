@@ -1,0 +1,14 @@
+<html>
+<head>
+	<title>Page Login</title>
+</head>
+<body>
+	<h1>{{ title }}</h1>
+	<form method="POST" enctype = "mulitpart/form-data">
+	{% csrf_token %}
+	{{form.as_p}}
+	<input type="submit" value="Login">
+	<a href = "/register/">Registration</a>
+	</form>
+</body>
+</html>

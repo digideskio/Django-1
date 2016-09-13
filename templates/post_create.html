@@ -1,0 +1,12 @@
+<html>
+<head>
+	<title>Page Create Post</title>
+</head>
+<body>
+	<h1>Page {{ title }} Post</h1>
+	<form method="POST" action="" enctype="multipart/form-data"/>{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="save" />
+	</form>
+</body>
+</html>

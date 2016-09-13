@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Page List</title>
+</head>
+<body>
+	<h1>{{ title }} Data</h1>
+	<p><h5>Welcome, {{ user }}</h5><a href="/" >Logout</a></p>
+	<form action="/create/">{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="Create New Post">
+		{% for pos in lipost %}
+		<p>
+		<a href="{% url 'detail' id=pos.id %}/">{{ pos.title }}</a><br/>
+		{{ pos.content }}<br/>
+		{{ pos.timestamp }}<br/>
+		{{ pos.id }}<br/>
+		<a href="/edit/{{ pos.id }}/" value="Edit">Edit</a>
+		<a href="/delete/{{ pos.id }}/" />Delete</a>
+		</p>
+	</form>
+	<br/>
+	{% endfor %}
+</body>
+</html>
